@@ -56,8 +56,8 @@ router.post('/add', (req, res, next) => {
     }
     else {
       console.log("redirected tto home page");
-      // takes the user back to the contact-list page
-   //   res.redirect('/books/index');
+     // go back to home page
+
       res.redirect('/books');
     }
   });
@@ -83,11 +83,27 @@ router.get('/:id', (req, res, next) => {
 
 // POST - process the information passed from the details form and update the document
 router.post('/:id', (req, res, next) => {
+  let id = req.params.id;
 
-  /*****************
-   * ADD CODE HERE *
-   *****************/
+  let updatedBook = book({
+    "_id": id,
+    "Title": req.body.NameTextField,
+    "Price": req.body.PriceTextField,
+    "Author": req.body.AuthorTextField,
+    "Genre": req.body.GenreTextField,
 
+  });
+
+  book.update({_id: id}, updatedBook, (err) => {
+      if(err) {
+          console.log(err);
+          res.end(err);
+      }
+      else {
+          // go back to home page
+          res.redirect('/books');
+      }
+  })
 });
 
 // GET - process the delete by user id
