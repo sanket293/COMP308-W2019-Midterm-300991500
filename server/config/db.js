@@ -1,11 +1,12 @@
 module.exports = {
   //local MongoDB deployment ->
-  "URI": "mongodb://localhost/sanketbooks"
+//  "URI": "mongodb://localhost/sanketbooks",
 
   //Remote MongoDB deployment -> let 
-  //"URI" :"mongodb://thomas:123456@ds161059.mlab.com:61059/books308"
+  // "URI" :"mongodb://Admin:Admin@ds042128.mlab.com:42128/sanket-books"
+  // mongodb://<dbuser>:<dbpassword>@ds042128.mlab.com:42128/sanket-books
 
-
+  "URI":"mongodb://sanket:sanket123@ds042128.mlab.com:42128/sanket-books"
 
 
 };
