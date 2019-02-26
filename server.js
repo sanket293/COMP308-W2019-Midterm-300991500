@@ -1,3 +1,7 @@
+// Name: Sanket Vagadiya,
+// Author's name: Sanketkumar Vagadiya,
+// StudentID: 300991500, 
+// Web App name: My-favourite-books
 let app = require('./server/app');
 let debug = require('debug')('comp308-w2019-midterm:server');
 let http = require('http');

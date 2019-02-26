@@ -1,3 +1,8 @@
+// Name: Sanket Vagadiya,
+// Author's name: Sanketkumar Vagadiya,
+// StudentID: 300991500, 
+// Web App name: My-favourite-books
+
 // modules required for routing
 let express = require('express');
 let router = express.Router();
@@ -31,7 +36,7 @@ router.get('/add', (req, res, next) => {
     }
     else {
       res.render('books/details', {
-        title: 'Books',
+        title: 'Add Books',
         books: books
       });
     }
@@ -73,7 +78,7 @@ router.get('/:id', (req, res, next) => {
     }
     else {
       res.render('books/details', {
-        title: 'Books',
+        title: 'Edit Books',
         books: booksObject
       });
     }
